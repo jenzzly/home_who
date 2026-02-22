@@ -6,9 +6,9 @@ ETL Pipeline Project
 
 2. transforms the data in any reasonable way,
 
-3. loads it into a PostgreSQL database.
+3. load it into a PostgreSQL database.
 
-# Configuration and important vairable
+# Configuration and important variable
 ```bash
 DB_DSN = os.getenv(
     "DATABASE_URL", ""
@@ -21,7 +21,7 @@ REQUEST_DELAY = 0.3
 ```
 
 ## 1. Prerequisites
-- Python 3.11+
+pip install -r requirements.txt
 
 ## 3. Install Python deps
 ```bash
