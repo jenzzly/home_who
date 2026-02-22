@@ -8,19 +8,17 @@ ETL Pipeline Project
 
 3. loads it into a PostgreSQL database.
 
-# Setup and Db configuration 
-
-db_name = defaultdb 
-
-host = pg-29eb9bc4-byja1101-who.k.aivencloud.com
-
-port = 28387 
-
-user = avnadmin 
-
-ssl mode : require 
-
-connection limit : 20 
+# Configuration and important vairable
+```bash
+DB_DSN = os.getenv(
+    "DATABASE_URL", ""
+)
+API_BASE = "https://ghoapi.azureedge.net/api"
+INDICATOR = "WHOSIS_000001"          # Life expectancy at birth
+PAGE_SIZE = 1000
+CHECKPOINT = "checkpoint.json"        # Stores last processed page for resume
+REQUEST_DELAY = 0.3
+```
 
 ## 1. Prerequisites
 - Python 3.11+
