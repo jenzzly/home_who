@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS who_life_expectancy (
                 id              SERIAL PRIMARY KEY,
                 indicator_code  TEXT        NOT NULL,
-                country_code    CHAR(3)     NOT NULL,
+                country_code    TEXT     NOT NULL,
                 continent       TEXT,
                 year            SMALLINT    NOT NULL,
                 sex             TEXT,                       -- MLE / FMLE / BTSX

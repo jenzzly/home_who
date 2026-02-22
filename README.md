@@ -37,7 +37,7 @@ python etl.py
 
 #DB analysis : 
 
-Global life expentency grouped by year Trends: 
+Global life expectancy grouped by year Trends: 
 
 ```sql
 SELECT year, ROUND(AVG(value), 1) AS avg_life_expectancy
