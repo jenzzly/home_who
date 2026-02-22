@@ -10,8 +10,6 @@ ETL Pipeline Project
 
 # Setup and Db configuration 
 
-service uri: postgres://avnadmin:password@pg-29eb9bc4-byja1101-who.k.aivencloud.com:28387/defaultdb?sslmode=require 
-
 db_name = defaultdb 
 
 host = pg-29eb9bc4-byja1101-who.k.aivencloud.com
@@ -19,8 +17,6 @@ host = pg-29eb9bc4-byja1101-who.k.aivencloud.com
 port = 28387 
 
 user = avnadmin 
-
-password = ask for one 
 
 ssl mode : require 
 
@@ -38,3 +34,17 @@ pip install -r requirements.txt
 ```bash
 # Full run
 python etl.py
+
+#DB analysis : 
+
+Global life expentency grouped by year Trends: 
+
+```sql
+SELECT year, ROUND(AVG(value), 1) AS avg_life_expectancy
+FROM who_life_expectancy
+WHERE sex = 'SEX_BTSX'
+GROUP BY year ORDER BY year;
+```sql
+
+#Test
+pytest test.py -v
