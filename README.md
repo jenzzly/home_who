@@ -21,7 +21,7 @@ REQUEST_DELAY = 0.3
 ```
 
 ## 1. Prerequisites
-pip install -r requirements.txt
+Python 3.11 or later installed
 
 ## 3. Install Python deps
 ```bash
